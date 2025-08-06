@@ -1,0 +1,2 @@
+body { margin: 0; font-family: sans-serif; background: #f4f4f4; }
+.dashboard { display: flex; flex-direction: column; padding: 1rem; gap: 1rem; }
