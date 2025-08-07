@@ -1,5 +1,5 @@
 {
-  "name": "dashboard-vincennes",
+  "name": "dashboard-vincennes.",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
