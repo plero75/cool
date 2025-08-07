@@ -1,6 +1,8 @@
 {
   "name": "cool",
   "version": "1.0.0",
+    "type": "module",
+
   "homepage": "https://plero75.github.io/cool",
   "scripts": {
     "predeploy": "npm run build",
