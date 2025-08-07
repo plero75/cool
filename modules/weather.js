@@ -1,6 +1,6 @@
-export async function fetchWeather() {
+export async function getWeather() {
   try {
-    const res = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.84&longitude=2.45&current=temperature_2m,weathercode&timezone=Europe%2FParis");
+    const res = await fetch("https://api.meteo.example/...");
     const data = await res.json();
     document.getElementById("weather").textContent = `🌤️ ${data.current.temperature_2m} °C`;
   } catch (error) {
