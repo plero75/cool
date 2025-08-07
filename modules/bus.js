@@ -1,7 +1,7 @@
-import { fetchWithTimeout } from './api.js';
 export async function fetchBus() {
+  try {
     document.getElementById("bus").textContent = "🚌 Bus : Prochains départs…";
-  } catch {
+  } catch (error) {
     document.getElementById("bus").textContent = "⚠️ Bus indisponibles";
   }
 }

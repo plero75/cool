@@ -1,9 +1,9 @@
-import { fetchWithTimeout } from './api.js';
 export async function fetchRaces() {
-  const data = await fetchWithTimeout("races.json");
+  try {
+    const res = await fetch("races.json");
     const data = await res.json();
     document.getElementById("races").textContent = `🏇 Prochaines courses : ${data.length}`;
-  } catch {
+  } catch (error) {
     document.getElementById("races").textContent = "⚠️ Courses indisponibles";
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "dashboard-vincennes.",
+  "name": "dashboard-vincennes",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
@@ -9,5 +9,6 @@
   "dependencies": {},
   "devDependencies": {
     "vite": "^4.0.0"
-  }
+  },
+  "homepage": "https://plero75.github.io/cool/"
 }

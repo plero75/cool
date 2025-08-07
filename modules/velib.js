@@ -1,7 +1,7 @@
-import { fetchWithTimeout } from './api.js';
 export async function fetchVelib() {
+  try {
     document.getElementById("velib").textContent = "🚲 Vélib' : Stations disponibles…";
-  } catch {
+  } catch (error) {
     document.getElementById("velib").textContent = "⚠️ Vélib' indisponibles";
   }
 }
