@@ -1,9 +1,0 @@
-export async function fetchRaces() {
-  try {
-    const res = await fetch("races.json");
-    const data = await res.json();
-    document.getElementById("races").textContent = `🏇 Prochaines courses : ${data.length}`;
-  } catch (error) {
-    document.getElementById("races").textContent = "⚠️ Courses indisponibles";
-  }
-}
