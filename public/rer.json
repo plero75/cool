@@ -1,3 +1,12 @@
 {
-  "status": "OK"
+  "lines": [
+    {
+      "name": "A",
+      "status": "OK"
+    },
+    {
+      "name": "B",
+      "status": "Retards"
+    }
+  ]
 }

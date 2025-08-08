@@ -1,10 +1,10 @@
 {
-  "items": [
+  "articles": [
     {
-      "title": "Hello"
+      "title": "Ouverture du marché"
     },
     {
-      "title": "World"
+      "title": "Concert au parc"
     }
   ]
 }
