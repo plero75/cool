@@ -1,9 +1,25 @@
-export async function fetchRaces() {
+import { fetchWithTimeout } from './api.js';
+
+export async function getRaces() {
+  const el = document.getElementById('races');
+  if (!el) return;
+
   try {
-    const res = await fetch("races.json");
-    const data = await res.json();
-    document.getElementById("races").textContent = `🏇 Prochaines courses : ${data.length}`;
+    const data = await fetchWithTimeout(
+      `${import.meta.env.BASE_URL}races.json`,
+      {},
+      { timeout: 5000, retries: 1, fallback: { races: [] } }
+    );
+
+    if (!Array.isArray(data.races) || data.races.length === 0) {
+      el.textContent = 'Aucune course disponible';
+      return;
+    }
+
+    el.innerHTML = `<ul>${data.races
+      .map((r) => `<li>${r.name} — ${r.date}</li>`)
+      .join('')}</ul>`;
   } catch (error) {
-    document.getElementById("races").textContent = "⚠️ Courses indisponibles";
+    el.textContent = '⚠️ Courses indisponibles';
   }
 }
