@@ -1,6 +1,6 @@
 // modules/api.js
 
-const TIMEOUT = 7000;
+const TIMEOUT = 150000; // 15s
 
 export async function fetchWithTimeout(url, options = {}, fallback = 'Erreur') {
   const controller = new AbortController();
