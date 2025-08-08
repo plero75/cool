@@ -1,13 +1,14 @@
 {
-  "name": "dashboard-vincennes",
+  "name": "cool",
   "version": "1.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^7.0.6"
-  },
-  "homepage": "https://plero75.github.io/cool/"
+    "vite": "4.5.14"
+  }
 }

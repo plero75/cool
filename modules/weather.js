@@ -1,11 +1,6 @@
-// modules/weather.js
 import { fetchWithTimeout } from './api.js';
-
-export async function fetchWeather() {
-  try {
-    const data = await fetchWithTimeout("https://api.meteo.example/current");
-    document.getElementById("weather").textContent = `🌤️ ${data.current.temperature_2m} °C`;
-  } catch (error) {
-    document.getElementById("weather").textContent = "⚠️ Météo indisponible";
-  }
+export async function getWeather(){
+  const el=document.getElementById('weather'); if(!el) return;
+  const data = await fetchWithTimeout(`${import.meta.env.BASE_URL}weather.json`,{}, {fallback:{current:{temperature_2m:'--'}}});
+  el.textContent = `🌤️ ${data?.current?.temperature_2m ?? '--'} °C`;
 }

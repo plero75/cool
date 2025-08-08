@@ -1,19 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard Hippodrome</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div id="datetime"></div>
-  <div id="weather"></div>
-  <div id="rer"></div>
-  <div id="bus"></div>
-  <div id="velib"></div>
-  <div id="news"></div>
-  <div id="races"></div>
-  <script type="module" src="script.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cool Dashboard</title>
+    <link rel="stylesheet" href="/cool/style.css" />
+  </head>
+  <body>
+    <main class="grid">
+      <section><h2>Météo</h2><div id="weather">...</div></section>
+      <section><h2>RER</h2><div id="rer">...</div></section>
+      <section><h2>Bus</h2><div id="bus">...</div></section>
+      <section><h2>Vélib</h2><div id="velib">...</div></section>
+      <section><h2>News</h2><div id="news">...</div></section>
+      <section><h2>Courses</h2><div id="races">...</div></section>
+    </main>
+    <button id="refresh">Rafraîchir</button>
+    <script type="module" src="/cool/script.js"></script>
+  </body>
 </html>
